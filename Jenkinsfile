@@ -3,7 +3,7 @@ node {
         echo 'Building....'
         sh 'java -version'
         wget https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/5.0.2/flyway-commandline-5.0.2-linux-x64.tar.gz
-        mkdir -p flyway && tar -xvf flyway-commandline-5.0.2-linux-x64.tar.gz -C flyway
+        sh 'mkdir -p flyway && tar -xvf flyway-commandline-5.0.2-linux-x64.tar.gz -C flyway'
         pwd     
     }
     stage('Database Test TBD') {
