@@ -1,9 +1,7 @@
 node {
     stage('Database Build TBD') {
         echo 'Building....'
-             steps {
-                sh 'java -version'
-            }
+        sh 'java -version'
     }
     stage('Database Test TBD') {
         echo 'Building....'
