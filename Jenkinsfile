@@ -10,6 +10,7 @@ node {
             sh 'tar -xvf flyway-commandline-5.0.2-linux-x64.tar.gz'
         }
         sh 'cd /var/lib/jenkins/workspace/jhipster_App_DB_pipeline/flyway-5.0.2'
+        sh 'ls -lart'
         sh 'mv flyway flyway.sh'
         sh 'chmod 777 *.*'
         sh './flyway.sh info'
