@@ -2,7 +2,7 @@ node {
     stage('Database Build TBD') {
         echo 'Building....'
         def exists = fileExists 'flyway-commandline-5.0.2-linux-x64.tar.gz'
-        def commitHash = checkout(scm).GIT_COMMIT
+        def commitHash = checkout("https://github.com/MukeshPurohit/jhipsterSampleDB.git").GIT_COMMIT
         
         if (exists) {
             echo 'flyway-commandline-5.0.2-linux-x64.tar.gz already exist and skipping re-downloading...'
@@ -12,9 +12,9 @@ node {
             sh 'tar -xvf flyway-commandline-5.0.2-linux-x64.tar.gz'
         }
         
-        sh 'checkout scm https://github.com/MukeshPurohit/jhipsterSampleDB.git'
+        #sh 'checkout scm https://github.com/MukeshPurohit/jhipsterSampleDB.git'
         
-        sh 'checkout scm https://github.com/MukeshPurohit/jhipsterSampleApp_v1.git'
+        #sh 'checkout scm https://github.com/MukeshPurohit/jhipsterSampleApp_v1.git'
         
         dir ('/var/lib/jenkins/workspace/jhipster_App_DB_pipeline/flyway-5.0.2') {
             sh 'ls -lart'
