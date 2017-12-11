@@ -1,6 +1,12 @@
 node {
     stage('Database Build TBD') {
         echo 'Building....'
+        def exists = fileExists 'flyway-commandline-5.0.2-linux-x64.tar.gz'
+        if (exists) {
+            echo 'fileExists-Yes'
+        } else {
+            echo 'fileExists-No'
+        }
         sh 'java -version'
         sh 'wget https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/5.0.2/flyway-commandline-5.0.2-linux-x64.tar.gz'
         sh 'tar -xvf flyway-commandline-5.0.2-linux-x64.tar.gz'
