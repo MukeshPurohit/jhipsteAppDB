@@ -2,7 +2,7 @@ node {
     stage('Database Build TBD') {
         echo 'Building....'
              steps {
-                mysql -u root -proot
+                mysql -u root -pKitchen@123
             }
     }
     stage('Database Test TBD') {
