@@ -10,11 +10,12 @@ node {
             sh 'tar -xvf flyway-commandline-5.0.2-linux-x64.tar.gz'
         }
         dir ('/var/lib/jenkins/workspace/jhipster_App_DB_pipeline/flyway-5.0.2') {
-        sh 'ls -lart'
-        sh 'mv flyway flyway.sh'
-        sh 'chmod 777 *.*'
-        sh './flyway.sh info'
-    }   
+            sh 'ls -lart'
+            sh 'mv flyway flyway.sh'
+            sh 'chmod 777 *.*'
+            sh './flyway.sh info'
+        }   
+        sh 'git checkout https://github.com/MukeshPurohit/jhipsterSampleDB.git'
        
     }
     stage('Database Test TBD') {
