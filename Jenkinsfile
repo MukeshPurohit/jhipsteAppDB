@@ -12,10 +12,6 @@ node {
             sh 'tar -xvf flyway-commandline-5.0.2-linux-x64.tar.gz'
         }
         
-        #sh 'checkout scm https://github.com/MukeshPurohit/jhipsterSampleDB.git'
-        
-        #sh 'checkout scm https://github.com/MukeshPurohit/jhipsterSampleApp_v1.git'
-        
         dir ('/var/lib/jenkins/workspace/jhipster_App_DB_pipeline/flyway-5.0.2') {
             sh 'ls -lart'
             sh 'mv flyway flyway.sh'
