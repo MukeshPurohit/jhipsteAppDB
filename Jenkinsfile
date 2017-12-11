@@ -1,11 +1,20 @@
 node {
-    stage('Build') {
+    stage('Database Build TBD') {
         echo 'Building....'
     }
-    stage('Test') {
+    stage('Database Test TBD') {
         echo 'Building....'
     }
-    stage('Deploy') {
+    stage('Database Deploy TBD') {
+        echo 'Deploying....'
+    }
+    stage('Database Build TBD') {
+        echo 'Building....'
+    }
+    stage('Database Test TBD') {
+        echo 'Building....'
+    }
+    stage('Database Deploy TBD') {
         echo 'Deploying....'
     }
 }
