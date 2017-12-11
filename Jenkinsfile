@@ -3,6 +3,7 @@ node {
         echo 'Building....'
         def exists = fileExists 'flyway-commandline-5.0.2-linux-x64.tar.gz'
         def commitHash = checkout('https://github.com/MukeshPurohit/jhipsterSampleDB.git').GIT_COMMIT
+        checkout scm
         
         if (exists) {
             echo 'flyway-commandline-5.0.2-linux-x64.tar.gz already exist and skipping re-downloading...'
