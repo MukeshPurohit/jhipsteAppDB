@@ -2,7 +2,7 @@ node {
     stage('Database Build TBD') {
         echo 'Building....'
              steps {
-                java -version
+                sh 'java -version'
             }
     }
     stage('Database Test TBD') {
