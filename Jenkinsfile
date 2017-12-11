@@ -11,7 +11,7 @@ node {
         }
         sh 'cd /var/lib/jenkins/workspace/jhipster_App_DB_pipeline/flyway-5.0.2'
         sh 'chmod 777 *.*'
-        sh './flyway info'
+        sh 'flyway info'
        
     }
     stage('Database Test TBD') {
